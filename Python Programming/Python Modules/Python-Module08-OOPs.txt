@@ -1,0 +1,179 @@
+**Creating Class**
+class ClassName:
+  def methodName(self):
+    print("...")
+
+c = ClassName()
+print(type(c))
+print(isinstance(c, ClassName))  // True
+
+
+**Constructors**
+class CN:
+  def __init__(self, x,y,...):
+    self.x = x
+    self.y = y
+
+c = CN(1,2) // for x & y
+
+
+**Class vs Instance Attributes**
+class CN:
+  CA = "..."
+  def __init__(self, x,y,...):
+    self.x = x
+    self.y = y
+
+c = CN(1,2) // for x & y
+c.z = 12 // can add 
+- x, y, z are instance attributes
+-while CA is class attriburte since it's value won't change
+  among the different instances
+
+
+**Class vs Instance Methods**
+class CN:
+
+  def __init__(self, x,y,...):
+    self.x = x
+    self.y = y
+  
+  def draw(self):  //  Instance Method
+    print(self)
+
+  @classmethod
+  def zero(cls): //  Class Method  
+    return cls(...)  //  here cls represent the class name
+x = CN.zero()
+x.draw() 
+
+
+**Magic Methods**
+-constructor magic method
+class A:
+
+  def __init__(self, x,y,...):
+    self.x = x
+    self.y = y
+
+  def __str__(self):
+    return f"({self.x})"
+
+a = A()
+print(a) // returns string instead of Obj ref
+
+-string magic method
+  def __str__(self):
+    return (f"({self.x}, {self.y})")
+
+-comparision magic methods
+  def __eq__(self, other):
+    return self.x == other.x and self.y == other.y
+
+point = Point(1,2)
+other = Point(1,2)
+
+-Normal Arithmetic Operations
+  def __add__(self, other):
+    return Point(self.x+other.x, self.y+other.y)
+point = Point(1,2)
+other = Point(1,2)
+combined = point + other
+print(combined.x, combined.y)
+
+
+**Custom Container**
+**Private Members**
+**Property**
+ 
+
+**Inheritance**
+# object class is base/parent class of all the classes (sub/child classes) by default
+class A:
+    def __init__(self, age = 1):
+        self.age = age
+    def eat(self):
+        print("Eat")
+class M(A):
+    def walk(self):
+        print("Walk")
+class F(A):
+    def swim(self):
+        print("Swim")
+M1 = M()
+M1.eat()
+M1.age
+print(isinstance(M1, object)) // True
+print(issubclass(A, object))  //  True
+
+
+**Method Overriding**
+class A:
+    def __init__(self, age = 1):
+        print("Animal Constructor")
+        self.age = age
+    def eat(self):
+        print("Eat")
+class M(A):
+    def __init__(self, weight=30):
+        super().__init__()
+        print("Mammal Constructor")
+        self.weight = weight
+        # super().__init__()
+    def walk(self):
+        print("Walk")
+M1 = M()
+print(M1.age)
+
+
+**Multilevel-Inheritance**
+OneClass:
+TwoClass(OneClass):
+ThreeClass(TwoClass):
+#When wrong logic is applied in Inheritance -Inheritance Abuse
+
+
+**Multiple Inheritance**
+OneCLass:
+TwoClass:
+ThreeClass(OneClass, TwoClass):
+
+
+**Abstract Class**
+from abc import ABC, abstractmethod
+class Stream(ABC)
+	
+  @abstractmethod
+  def  funct(self):
+	pass
+#class which has abstract methods known as abstract class
+#and can't be insanceated + to which class this abstract 
+#class has been added must have the abstract menthod in it
+#else the class will be considered abstract as well
+#abstract class shares common behavious to it's subclasses
+
+
+**Polymorphism**
+#when a function take mant forms of instance(object)
+#this is determined at runtime
+
+**Duck Typing**
+#remove abstract class if it is not influncing
+#base classes and can be managed without abstract class
+
+
+**Extending Built-in Types**
+class Text(str): //defined class for string
+  def OwnNewFun(self): 
+    //code...
+
+
+**Data Classes**
+id(instanceName) - returns the memory location
+#data classes are made to hold the data only not methods
+from collections import namedtuple
+P = namedtuple("ClassName", ["x", "y"])
+p1 = P(x=1, y=2)
+p2 = P(x=3, y=9)
+#instance can't be mutated/modified
+#make new instance for that of same name

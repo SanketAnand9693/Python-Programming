@@ -1,0 +1,43 @@
+Output Method
+print("")
+
+Variables / VariableName
+# variable names must start with capital/small alphabets or "_"
+# two words must seperated with "_" e.g. "hello =_world"
+
+				***************"MODULE 01 BASICS"***************
+
+**DATATYPES TYPES**
+Number - int(1) / float(1.1) / complex(1+2j)
+Boolean - True / False
+None
+Sequential - str(string)/list/tuple
+Non-Sequential - dict/set
+
+
+**What is PIP/PEP?** 
+PIP is a package management system used to install and manage
+software packages/libraries written in Python
+
+
+**Operators**
+Arith:  - + - * ** / // % shorthand
+Comparision : > < >= <= == !=
+Logical: and or not (short citcut evaluation)
+Chaining Comparision: 18<=x(var)<65
+
+**Type Conversion Implicit/Explicit**
+check datatype = type(...) // return datatype
+int(val)
+float(val)
+bool(val) // '' 0 None False - Falsy
+str(val)...
+
+**Methods to be Known**
+ord('character')
+chr(integer)
+type(VariableName)
+round(float)
+abs(+/- number)
+math.ceil(float)
+math.floor(float)

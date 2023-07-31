@@ -1,0 +1,111 @@
+**Working With Paths**
+from pathlib import Path
+path = Path("...path...")
+
+
+**Working With Directories**
+from pathlib import Path
+path = Path("...path...")
+path.mkdir()
+path.rmdir()
+path.rename()
+
+paths = [p for p in path.iterdir() if p.is_dir()]
+py_files = [p for p in path.rglob/glob("*.py")]
+
+**Working With Files**
+from pathlib import Path
+from time import  ctime
+import shutil
+path = Path("Solutions/NewDir/__init__.py")
+p1 = Path("now.txt")
+path.unlink()
+print(ctime(path.stat().st_ctime))
+print(path.read_text())
+path.write_text("#helllo jiii")
+shutil.copy(p1,path)
+
+**Working With Zip Files**
+from pathlib import Path
+from zipfile import ZipFile
+
+//CREATE
+with ZipFile("egz.zip", "w") as zip:
+    for path in Path("./").rglob("*.*"):
+        zip.write(path)
+
+//EXTRACT
+with ZipFile("egz.zip") as zip:
+    print(zip.namelist())
+    info = zip.getinfo("Solutions/NewDir/__init__.py")
+    print(info.file_size)
+    print(info.compress_size)
+    zip.extractall("extract")
+
+
+**Working With CSV Files**
+import csv
+
+//CREATE
+with open("data.csv", "w") as file:
+    writer = csv.writer(file)
+    writer.writerow(["t_id", "p_id", "pri"])
+    writer.writerow([1000, 1,5])
+    writer.writerow([1001, 13,51])
+
+//READ
+with open("data.csv") as file:
+    reader = csv.reader(file)
+    print(list(reader))
+    for row in reader:
+        print(row)
+
+
+**Working With JSON Files**
+import json
+from pathlib import Path
+
+//CREATE
+data = json.dumps(movies)
+Path("movies.json").write_text(data)
+
+//READ
+data  = Path("movies.json").read_text()
+movies = json.loads(data)
+print(movies)
+
+**Working With SQLite Database**
+**Working With Mongo Database**
+**Working With DateTimes**
+
+
+**Working With Random Values**
+import  random
+import string
+
+print(random.random())
+print(random.randint(1,10))
+print(random.choice([1,2,3,4]))
+print(random.choices([1,2,3,4,5,6,7,8,9], k=2))
+print("".join(random.choices("dhanesh", k=2)))
+print("".join(random.choices(string.ascii_letters + string.digits, k=8)))
+
+n = [1,2,3,4,5]
+random.shuffle(n)
+print(n)
+
+**Working With Opening the Browser**
+import webbrowser
+webbrowser.open("http://sheryians.com")
+
+
+**Working With Sending Emails**
+**Working With Templates**
+
+
+**Working With Command Line Arguments**
+import sys
+if len(sys.argv) == 1:
+    print('No Arguments Given')
+else:
+    print(sys.argv)

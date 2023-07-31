@@ -1,0 +1,49 @@
+**Handling Exception**
+try:
+  age = int(input("Age:"))
+except ValueError: // ValueError as ex:
+  print("...msg") // print(ex) - to see error
+else: 
+  print("Runs when no exception occure")
+
+**Handling Different Exception**
+try:
+  age = int(input("Age:"))
+except ValueError:
+  print("...msg") 
+except ZeroDivisionError:
+  print("...msg") 
+
+**Combining multiple except**
+except (ValueError,ZeroDivisionError):  
+  print("...msg")
+
+**Cleaning Up**
+try:
+  file = open("filename")
+except ...:
+  
+else:
+
+finally:
+  file.close();
+  print("Runs always in any condition")
+
+
+**Raising Exception**
+def calc(age):
+  if age<=0:
+    raise ValueError("...msg")
+  return 10/age
+
+try:
+  calc(-1)
+except ValueError as err:
+  print(err)
+
+
+**Cost of Raising Exception is High**
+from timit import timeit
+ code = """ ... """
+print(timeit(code, number=1000)) 
+// number is for number of times the code we want to execute

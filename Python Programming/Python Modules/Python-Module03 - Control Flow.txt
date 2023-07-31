@@ -1,0 +1,16 @@
+MODULE 03:
+#Control Flow 
+#simple if Statement
+#simple if else statement
+#elif statement
+#nested if else statement
+#pass statement
+#or, and, not operator
+#in, not in keyword
+#check empty - if varname: 
+#Ternary Operator
+  variable = "true statement" if condition else "false statement"
+#Iterative statements(loops)
+#range function
+#for and while
+#break continue else

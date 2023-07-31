@@ -1,0 +1,9 @@
+Module 07: 
+#Array
+ from array import array
+ n = array("i", [1,2,3])
+ n.append("...")
+ n.insert(index)
+ n[index] = ...
+ n.pop()/(index)
+ n.remove() 

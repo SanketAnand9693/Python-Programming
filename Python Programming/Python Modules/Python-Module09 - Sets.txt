@@ -1,0 +1,19 @@
+Module 09:
+#Sets
+ for unique elements
+ set([list of numbers]) // return {...}
+ sets = {1,2,3}
+ sets.add(...)
+ sets.pop()
+ sets.discard(...)
+ sets.remove(...)
+ sets.union(setn)
+ sets.intersection(setn)
+ set1 | set2 // return Union of sets
+ set1 & set2 // return Intersection of sets
+ set1 - set2 // return Difference in sets
+ set1 ^ set2 // return either in set1 or set2 not both
+ -can't access using index instead convert in list
+check availibility using // if .. in set:
+ Iterating over sets
+#FrozenSets--

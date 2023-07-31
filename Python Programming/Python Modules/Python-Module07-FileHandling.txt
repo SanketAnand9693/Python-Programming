@@ -1,0 +1,58 @@
+**Reading File**
+openAndReadFile = open('./file.txt', 'r')
+openAndReadFile.read() // read all data
+openAndReadFile.readline() // read first line 
+openAndReadFile.readline(4) // read 4 char of first line
+openAndReadFile.close()
+
+**Writing in File**
+writeFileAndOpen = open('newfile.txt', 'w') //if not present then creates the file
+writeFileAndOpen.write('L1 This is new file data') // replace old data with new one
+writeFileAndOpen.close()
+
+**Updating/Appending the Data in File**
+openFileAndAppend = open('newfile.txt', 'a') //if not present then creates the file
+openFileAndAppend.write('how are you')
+openFileAndAppend.close()
+
+**Copying File Data**
+f = open('./file.txt', 'r')
+f1 = open('./newfile.txt', 'w')
+for i in f:
+    f1.write(i)
+f.close()
+f1.close()
+
+
+
+**For Multimedia**
+f = open('./file.jpg', 'rb') // rb - read binary
+f1 = open('./newfile.jpg', 'wb') - write binary
+for i in f:
+    f1.write(i)
+f.close()
+f1.close()
+
+**we should always close the file what we have opened
+
+**With Statement**
+
+try:
+  with open("filename") as file, ...another file: // closes automatically
+    file.__enter__ OR file.__exit__
+-obj having __enter/exit methods  can be used with "with"
+
+**Pickle/Unpickle**
+-converting the data in bytestream is Pickling and vise versa
+import pickle
+d = {...data...}
+with open("./filename", 'wb') as file:
+    pickle.dump(d,file, 1-5)
+-----------
+with open("./filename", 'rb') as file:
+    print(pickle.load(f))
+
+
+**Remove File**
+import os
+os.remove('./file.txt')

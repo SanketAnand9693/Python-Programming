@@ -1,0 +1,28 @@
+
+**Defining**
+"single line String"/ 'single line string'
+""" multiple line string"""
+
+**Accessing**
+len(str) 
+s[0] s[-1] 
+s[0:3] s[0:] s[:3] s[:] s[::-1]
+
+**Escape Sequence Characters**
+\" \' \\ \n \t \b
+
+**Formatted Strings**
+a + " " + b = f/F"{a} {b}"
+"{0} {1}".format(a,b)
+
+**dir() & help()**
+dir(datatype) - returns all the valid methods in it 
+help(var.menthod) - returns the use of given menthod 
+
+**String Methods**
+refer python.org docs 
+"..." in/not in string // return True/False
+
+**Input/Output Method**
+print(...end="", sep="")
+input("message...")

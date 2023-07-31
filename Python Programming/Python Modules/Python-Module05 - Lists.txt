@@ -1,0 +1,45 @@
+MODULE 05:
+#Lists
+ Creating List
+  l = [..] / [range()] / list([..])   
+  letters = ["a", "b", ..]
+  matrix = [[0,1],[2,3]]
+  zeros = [0] * 5
+  list(range(20))
+  list("Hello World")
+  len(list("Hello World"))
+ Reading List
+  l[0] / [0:3]=[:3] / [0:]=[:] / 
+  [::-1] reverse order / [::2] skipping number 
+ Methods (many more...)
+ l.append("...") // adding at last
+ l.insert(index, "...") // adding at particular index
+ l.pop()"at last" / (index) /return pop element
+ l.remove("item")
+ del l[0:3] // multiple element
+ l.clear() // all clear
+ Finding List Items
+  if "..." in/not in l:
+    print(l.index("...")
+ lnum.sort(reverse=True)  //mutable, reverse? for reversing
+ l.reverse()
+ l.copy() / return copy of list
+== operator vs is keyword 
+ join and split method
+ List vs Array
+ List vs String
+ iterating list
+  for i in l: 
+      ...
+#list inside list - matrix
+#Unpacking List
+  l = [1,2]
+  f,s = l // f = l[0]
+  -var must be equal to items of list else
+  f, *others = l
+#Unpacking Operator
+ l = [1,2,3,4]
+ print(*l) // 1 2 3 -like spread operstor of JS
+
+#bytes(seq.datatype) 0 - 255 only
+#bytearray(seq.datatype) 0 - 255 only

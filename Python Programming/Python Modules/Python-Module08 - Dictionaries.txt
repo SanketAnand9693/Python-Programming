@@ -1,0 +1,19 @@
+Module 08:
+#Dictionaries
+ dic = {"x":1,"y":2} or dict(x=1,y=2)
+ dict["x"] // access using
+ dict["x"] = 12 // insert/update
+ if "a" in/not in dict: //check presence(1)
+ dict.get("a")-None //check presence(2)
+ dict.get("a", 0) // if not then add a=0
+ del dict["a"] // remove
+ for key in dict: 
+   print(key,dict[key]) // OR
+ for key, value in dict.items();
+   print(key,value)	//dict.items return tuple(key, value)
+#Unpacking Operator
+ d1 = {"x":1,"y":2 }
+ d2 = {"x":4,"z":5 }
+ d3 = {**d1, **d2} // unpacking operator for dict
+ print(d3) // {"x":4, "y":2, "z":5}
+#Methods

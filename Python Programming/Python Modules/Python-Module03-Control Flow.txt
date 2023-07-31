@@ -1,0 +1,47 @@
+
+**Conditional Statements**
+if condition:
+  //statement
+  ...
+elif condition:
+  //statement
+  ..
+else:
+  ...
+
+**Types**
+Simple if
+Simple if else
+Multiple if else
+Nested if else
+
+**Ternary Operator**
+variable = "true statement" if condition else "false statement"
+
+**For Loops**
+range(3)/(1,3)/(1"start",4"end",2"step")
+for loopvar in range(num):
+  //statement
+
+**While Loops**
+while condition:
+  //statement
+  updation statement
+
+**for/while else** 
+// loop body
+else:
+  //statement
+-else runs only if loop doesn't break/ early tremination																								` 
+
+**Nested Loops**
+for loopvar in range(3):
+  for loopvar in range(3):
+    //statement
+while(condition1):
+  while(condition2):
+    //statement
+
+**Iterable**
+instead of range(num)
+Sequential and Non-sequentials are Iterable as well 

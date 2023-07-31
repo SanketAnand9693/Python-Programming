@@ -1,0 +1,11 @@
+Module 06:
+#Tuples / range in tuples
+ CreateRead in tuples
+  t=tuple("string") // ("s", ...)
+  t= (1,2,3) / 1,2 / 1,
+  print(t[0:2])
+ methods
+ function returning multiple value
+ iterating over tuple
+ Unpacking Tuple
+  x,y,z = t

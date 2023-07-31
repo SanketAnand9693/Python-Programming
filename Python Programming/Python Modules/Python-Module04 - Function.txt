@@ -1,0 +1,20 @@
+MODULE 04:
+#Functions
+#Types Of Functions
+  Perform a task
+  Return a value
+#print vs return in function
+#function inside function
+#Keyword Arguments
+  funname("arg1", param2="agr2")
+  param2 is keyword Aruments
+#Default parameters / optional params
+  def funname(param1, param2, param3 = 5):
+    return param1+param2
+  funname("arg1", "arg2")
+  -optional params is always at last
+#Variable scope
+  to access global var in function use
+  global varname
+  varname = ...
+--Few Function Questions--
